@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import { SafeAreaView, Text, Button, FlatList, View } from 'react-native'
+import { SafeAreaView, Text, Button, FlatList, View, Dimensions } from 'react-native'
+import Slider from '@react-native-community/slider';
 
 import Context from '../context/store'
 
@@ -8,7 +9,13 @@ const VoteFilter = props => {
 
     return (
         <SafeAreaView>
-            <Button title="Filtrele" onPress={() => dispatch({ type: "FILTER_CATS", vote: 2 })} />
+            <Slider
+                style={{ width: Dimensions.get("window").width * 0.9, alignSelf: 'center' }}
+                minimumValue={0}
+                maximumValue={6}
+                onValueChange={(value) => dispatch({ type: "FILTER_CATS", vote: value })}
+                step={1}
+            />
 
             <FlatList
                 keyExtractor={(item, index) => index.toString()}

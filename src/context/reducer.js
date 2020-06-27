@@ -12,7 +12,8 @@ export function reducer(state, action) {
             return { ...state }
 
         case "FILTER_CATS":
-            state.filteredCats = state.catFacts.filter(x => x.upvotes == action.vote)
+            const filteredData = state.catFacts.filter(x => x.upvotes == action.vote)
+            state.filteredCats = filteredData
             return { ...state }
 
         default:
