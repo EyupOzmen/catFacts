@@ -1,20 +1,24 @@
-import React from 'react'
-import { SafeAreaView, Text, View } from 'react-native'
+import React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import { First, Second, Third } from './pages'
+import { Facts, Login, VoteFilter } from './pages'
 
-import Provider from './context/Provider'
+const Stack = createStackNavigator();
 
-const Main = props => {
+function Main() {
     return (
-        <Provider>
-            <SafeAreaView style={{ flex: 1 }}>
-                <First />
-                <Second />
-                <Third />
-            </SafeAreaView>
-        </Provider>
-    )
+        <NavigationContainer>
+            <Stack.Navigator>
+
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Facts" component={Facts} />
+                <Stack.Screen name="Votes" component={VoteFilter} />
+
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
 
-export default Main
+export default Main;
