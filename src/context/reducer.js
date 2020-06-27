@@ -8,6 +8,10 @@ export function reducer(state, action) {
             state.counter = state.counter - 1
             return { ...state }
 
+        case "SET_USER":
+            state.user = action.userObj
+            return { ...state }
+
         default:
             break;
     }
