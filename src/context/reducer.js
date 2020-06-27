@@ -7,6 +7,10 @@ export function reducer(state, action) {
             state.user = action.userOBJ
             return { ...state }
 
+        case "SET_CATS":
+            state.catFacts = action.catFactsARR
+            return { ...state }
+
         default:
             return state
     }

@@ -16,8 +16,8 @@ function Main() {
                 <Stack.Navigator>
 
                     <Stack.Screen name="Login" component={Login} />
-                    <Stack.Screen name="Facts" component={Facts} />
-                    <Stack.Screen name="Votes" component={VoteFilter} />
+                    <Stack.Screen name="Facts" component={Facts} options={{ headerShown: false }} />
+                    <Stack.Screen name="Votes" component={VoteFilter} options={{ headerShown: false }} />
 
                 </Stack.Navigator>
             </NavigationContainer>
