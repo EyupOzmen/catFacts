@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -17,7 +16,7 @@ function Main() {
 
                     <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="Facts" component={Facts} options={{ headerShown: false }} />
-                    <Stack.Screen name="Votes" component={VoteFilter} options={{ headerShown: false }} />
+                    <Stack.Screen name="Votes" component={VoteFilter} />
 
                 </Stack.Navigator>
             </NavigationContainer>

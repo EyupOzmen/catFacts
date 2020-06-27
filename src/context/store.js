@@ -2,7 +2,8 @@ import { createContext } from 'react'
 
 export const initialState = {
     user: {},
-    catFacts: []
+    catFacts: [],
+    filteredCats: []
 }
 
 export default Context = createContext(initialState)

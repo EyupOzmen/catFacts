@@ -11,6 +11,10 @@ export function reducer(state, action) {
             state.catFacts = action.catFactsARR
             return { ...state }
 
+        case "FILTER_CATS":
+            state.filteredCats = state.catFacts.filter(x => x.upvotes == action.vote)
+            return { ...state }
+
         default:
             return state
     }

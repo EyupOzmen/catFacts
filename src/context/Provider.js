@@ -3,7 +3,6 @@ import React, { useReducer } from 'react'
 import Context, { initialState } from './store'
 import { reducer } from './reducer'
 
-
 // STATE MANAGMENT
 
 const Provider = props => {
