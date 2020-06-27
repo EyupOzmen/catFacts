@@ -5,19 +5,23 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { Facts, Login, VoteFilter } from './pages'
 
+import Provider from './context/Provider'
+
 const Stack = createStackNavigator();
 
 function Main() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator>
+        <Provider>
+            <NavigationContainer>
+                <Stack.Navigator>
 
-                <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Facts" component={Facts} />
-                <Stack.Screen name="Votes" component={VoteFilter} />
+                    <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="Facts" component={Facts} />
+                    <Stack.Screen name="Votes" component={VoteFilter} />
 
-            </Stack.Navigator>
-        </NavigationContainer>
+                </Stack.Navigator>
+            </NavigationContainer>
+        </Provider>
     );
 }
 
